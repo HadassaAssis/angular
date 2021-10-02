@@ -1,0 +1,84 @@
+[debug] [2021-09-19T00:56:51.892Z] ----------------------------------------------------------------------
+[debug] [2021-09-19T00:56:51.895Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HOME\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-19T00:56:51.895Z] CLI Version:   9.18.0
+[debug] [2021-09-19T00:56:51.895Z] Platform:      win32
+[debug] [2021-09-19T00:56:51.895Z] Node Version:  v12.19.0
+[debug] [2021-09-19T00:56:51.897Z] Time:          Sun Sep 19 2021 03:56:51 GMT+0300 (GMT+03:00)
+[debug] [2021-09-19T00:56:51.897Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-19T00:56:51.907Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-19T00:56:51.907Z] > authorizing via signed-in user (m0527646507@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\תיכנות\finalProject\angular
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-09-19T01:03:04.970Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2021-09-19T01:03:07.000Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2021-09-19T01:03:07.001Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2021-09-19T01:03:45.365Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-19T01:03:45.366Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-19T01:03:57.333Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 19 Sep 2021 01:03:55 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-19T01:03:57.369Z] >>> HTTP REQUEST POST https://firebase.googleapis.com/v1beta1/projects/intense-emblem-298616:addFirebase  
+ 
+[debug] [2021-09-19T01:03:59.693Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Sep 2021 01:03:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked","x-netfree-careful-content-charset":"utf8","connection":"keep-alive","keep-alive":"timeout=5"}
+[debug] [2021-09-19T01:03:59.699Z] > refreshing access token with scopes: []
+[debug] [2021-09-19T01:03:59.703Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-19T01:04:00.334Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 19 Sep 2021 01:03:58 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-19T01:04:00.367Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 [none]
+[debug] [2021-09-19T01:04:01.302Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 200
+[debug] [2021-09-19T01:04:01.303Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 {"name":"operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5"}
+[debug] [2021-09-19T01:04:01.806Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2021-09-19T01:04:01.807Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 [none]
+[debug] [2021-09-19T01:04:02.575Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 200
+[debug] [2021-09-19T01:04:02.576Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 {"name":"operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5"}
+[debug] [2021-09-19T01:04:03.577Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2021-09-19T01:04:03.578Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 [none]
+[debug] [2021-09-19T01:04:04.213Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 200
+[debug] [2021-09-19T01:04:04.214Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 {"name":"operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5"}
+[debug] [2021-09-19T01:04:06.215Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2021-09-19T01:04:06.216Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 [none]
+[debug] [2021-09-19T01:04:07.056Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 200
+[debug] [2021-09-19T01:04:07.056Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5 {"name":"operations/workflows/OGVhZmUyOTktMDU3ZS00ODM2LTgxNzYtYzllYjgzZWUwNTY5","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"intense-emblem-298616","projectNumber":"116763932109","displayName":"ocrapi","name":"projects/intense-emblem-298616","resources":{"hostingSite":"intense-emblem-298616"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: intense-emblem-298616
+[info]    - Project Name: ocrapi
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/intense-emblem-298616/overview
+[info] i  Using project intense-emblem-298616 (ocrapi) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-09-19T01:04:07.126Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-19T01:04:07.126Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-19T01:04:07.696Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 19 Sep 2021 01:04:05 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-19T01:04:07.725Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/intense-emblem-298616/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-09-19T01:04:30.061Z] Error: getaddrinfo ENOTFOUND serviceusage.googleapis.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND serviceusage.googleapis.com

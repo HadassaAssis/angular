@@ -1,0 +1,18 @@
+<mat-card style="height: 100%;">
+  <mat-card-header>
+    <mat-card-title>motor:</mat-card-title>
+    <mat-card-subtitle>The most popular motor to each gander</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider inset></mat-divider>
+  <br/>
+  <div  style="display:block;">
+    <canvas baseChart  style="width: inherit;height: inherit;"
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"
+      [options]="pieChartOptions"
+      [colors]="chartColor"
+      > 
+    </canvas>
+  </div>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card style="height: 100%;" >
+  <mat-card-header >
+    <mat-card-title>System users:</mat-card-title>
+    <mat-card-subtitle>Visit / receive form successfully</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider inset></mat-divider>
+  <mat-card-content class="row m-0 p-0" #ref>
+
+    <ngx-charts-advanced-pie-chart class="col"  
+      [results]="saleData"
+      [gradient]="true"
+      [view]="[ref.offsetHeight,ref.offsetWidth]"
+      >
+    </ngx-charts-advanced-pie-chart> 
+
+</mat-card-content>
+</mat-card>   
+

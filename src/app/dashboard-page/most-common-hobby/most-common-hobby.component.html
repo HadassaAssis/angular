@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header >
+    <mat-card-title>hoobies:</mat-card-title>
+    <mat-card-subtitle>Prevalence of hobby among users</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider inset></mat-divider>
+
+  <div style="display: block;" class="row py-3" >
+    <canvas baseChart  style="height: inherit;"
+      [data]="pieChartData" 
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+      [colors]="chartColor"
+      >
+    </canvas>
+  </div>
+  
+</mat-card>

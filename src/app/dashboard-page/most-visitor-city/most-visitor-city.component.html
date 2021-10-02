@@ -1,0 +1,11 @@
+<div #ref>
+<mat-card>
+  <mat-card-header >
+    <mat-card-title>The most populous city in users</mat-card-title>
+  </mat-card-header>
+
+  <google-map [options]="mapOptions" [height]="295" [width]="ref.offsetWidth*0.95">
+    <map-marker [position]="marker.position"></map-marker>
+  </google-map>
+</mat-card>
+</div>

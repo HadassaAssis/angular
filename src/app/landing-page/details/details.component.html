@@ -1,0 +1,97 @@
+<div class="container-fluid ">
+    <div class="row h-100 justify-content-center " >
+    <mat-card class="col-12 col-sm-8" >
+        <mat-card-header class="bg-light p-4">
+            <mat-card-title class="fs-3 fw-bolder" style="color: #C62828;">car form</mat-card-title>
+            <mat-card-subtitle> Enter all the details in full</mat-card-subtitle>
+        </mat-card-header>
+        <hr/>
+        
+        <mat-card-content class="p-lg-5 p-md-2 p-sm-1">
+          <form [formGroup]="detailsForm" (ngSubmit)="sumbit()">
+            <div class="row m-2">
+                <p class="fw-bolder fs-6">name:</p>
+                <mat-form-field class="col" appearance="outline" [color]="'white'">
+                    <mat-label>enter first name</mat-label>
+                    <input type="text" matInput placeholder="ex. oren" formControlName="f_name">
+                </mat-form-field>
+                <mat-form-field class="col" appearance="outline">
+                    <mat-label>enter last name</mat-label>
+                    <input type="text" matInput placeholder="ex. coen" formControlName="l_name">
+                </mat-form-field>
+            </div>
+
+            <div class="row m-2">
+                <p class="fw-bolder fs-6">select Gender:</p>
+                <mat-radio-group aria-label="select Gender" class="row justify-content-start m-2" formControlName="gander">
+                    <mat-radio-button class="col-2" value="male">male</mat-radio-button>
+                    <mat-radio-button class="col-2" value="female">Female</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div class="row m-3">
+            <p class="fw-bolder fs-6">email:</p>
+            <mat-form-field class="col-6" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput 
+                     placeholder="Ex. pat@example.com" formControlName="email">
+                <mat-error *ngIf="detailsForm.controls['email'].hasError('email')">the email is not correct</mat-error>
+            </mat-form-field>
+            </div>
+
+            <mat-divider inset></mat-divider>
+            <select-birthdate></select-birthdate>
+
+            <div class="row m-2 p-2">
+                <p>location:</p>
+                <AutocompleteComponent class="col-8" (setAddress)="getAddress($event)" adressType="geocode"></AutocompleteComponent>
+            </div>
+            <mat-divider inset></mat-divider>
+
+            <div class="row m-2 p-3">
+            <p class="fw-bolder fs-6">choose hobbies:</p>
+            <mat-selection-list formControlName="hobbiesList">
+                <mat-list-option *ngFor="let hobby of hobbies" value={{hobby}}>
+                  {{hobby}}
+                </mat-list-option>
+            </mat-selection-list>
+            </div>
+            <mat-divider inset></mat-divider>
+
+            <div class="row m-2 p-2">
+            <p class="fw-bolder fs-6">amount of seats:</p>
+            <mat-form-field class="col-4" appearance="outline">
+                <mat-label>Select amount of seats</mat-label>
+                <mat-select formControlName="seats">
+                  <mat-option *ngFor="let num of [2,3,4,5,6,7]" value={{num}}> {{num}} </mat-option>
+                </mat-select>
+                <mat-error></mat-error>              
+            </mat-form-field>
+            </div>
+
+            <div class="row m-2 p-2">
+            <p class="fw-bolder fs-6">select motor:</p>
+            <mat-radio-group aria-label="select Motor" class="row justify-content-start m-2" formControlName="motor">
+                <mat-radio-button value="electric" class="col-2">electric</mat-radio-button>
+                <mat-radio-button value="fuel" class="col-2">fuel</mat-radio-button>
+            </mat-radio-group>
+            </div>
+
+            <div class="row m-2 p-2">
+                <p class="fw-bolder fs-6">select color:</p>
+                <mat-form-field class="col-3" appearance="outline">
+                <input type="color" matInput formControlName="color"/>
+                <mat-error></mat-error>
+                </mat-form-field>
+            </div>
+          </form>
+        </mat-card-content>
+
+        <hr/>
+        <mat-card-actions class="row justify-content-end bg-light p-3 ">
+            <button type="submit" mat-raised-button class="col-1 p-2" (click)="sumbit()" >send</button>
+            <button mat-raised-button class="col-1 p-2" (click)="reset()">reset</button>
+        </mat-card-actions>
+    </mat-card>
+    </div>
+</div>

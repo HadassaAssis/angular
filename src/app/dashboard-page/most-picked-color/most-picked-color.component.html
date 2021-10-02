@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>The three most popular colors:</mat-card-title>
+    <mat-card-subtitle>Displayed by age</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider inset></mat-divider>
+  <dashboard-colors></dashboard-colors>
+  <div style="display: block;">
+    <canvas baseChart style="width: inherit;height: inherit;"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins">
+    </canvas>
+  </div>
+</mat-card>
+
