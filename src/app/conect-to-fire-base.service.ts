@@ -70,6 +70,8 @@ export class ConectToFireBaseService {
 
   //user connection
   public getTheTotalCOnnectionDetaild(){
+    //'onlyConnect' :user only visit landing page
+    //'sendSuccessfuly' :user send form successfuly
     let onlyConnect=<number><unknown>window.localStorage.getItem('onlyConnect')
     let sendSuccessfuly=<number><unknown>window.localStorage.getItem('sendSuccessfuly')
     return [{name:'Connect',value:onlyConnect?onlyConnect:0},{name:'Success',value:sendSuccessfuly?sendSuccessfuly:0}]
@@ -77,13 +79,18 @@ export class ConectToFireBaseService {
 
   //update data when complite form sucssesfuly
   public setDetailsOfConnection(){ 
+    //If the form submitted is first submitted in a browser, the number of visitors who did not submit the form successfully should be lowered.
+    //Update the entry that a form was submitted for the first time 
+    //(the number is not significant unless this entry has already been entered)
+    this.addLessLocalStorge('theFirstUser',1)
     this.addLessLocalStorge('sendSuccessfuly',1)
-    this.addLessLocalStorge('onlyConnect',-1)
-    window.localStorage.removeItem('ifConnect')
+    if (!window.localStorage.getItem('theFirstUser'))
+        this.addLessLocalStorge('onlyConnect',-1)
   }
 
   //update data when enter to landingpage
   public setDetailsOfUserFormsAtConnetion(){
+    //Check if there was another login, otherwise any browser refresh will be considered as a new user
     if (!window.localStorage.getItem('ifConnect'))
       this.addLessLocalStorge('onlyConnect',1)
     this.addLessLocalStorge('ifConnect',-1)
