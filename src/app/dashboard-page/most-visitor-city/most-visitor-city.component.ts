@@ -12,7 +12,7 @@ export class MostVisitorCityComponent implements OnInit {
   lng!:number
   mapOptions: google.maps.MapOptions = {
     center: this.service.getPopularCity() ,
-    zoom : 14
+    zoom : 10
   }
   //the position of the marker
   marker = {
