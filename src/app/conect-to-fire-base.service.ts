@@ -75,10 +75,11 @@ export class ConectToFireBaseService {
     return [{name:'Connect',value:onlyConnect?onlyConnect:0},{name:'Success',value:sendSuccessfuly?sendSuccessfuly:0}]
   }
 
-  //update data when compliteform sucssesfuly
+  //update data when complite form sucssesfuly
   public setDetailsOfConnection(){ 
     this.addLessLocalStorge('sendSuccessfuly',1)
     this.addLessLocalStorge('onlyConnect',-1)
+    window.localStorage.removeItem('ifConnect')
   }
 
   //update data when enter to landingpage
