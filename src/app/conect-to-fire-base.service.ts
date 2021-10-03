@@ -82,10 +82,10 @@ export class ConectToFireBaseService {
     //If the form submitted is first submitted in a browser, the number of visitors who did not submit the form successfully should be lowered.
     //Update the entry that a form was submitted for the first time 
     //(the number is not significant unless this entry has already been entered)
-    this.addLessLocalStorge('theFirstUser',1)
     this.addLessLocalStorge('sendSuccessfuly',1)
     if (!window.localStorage.getItem('theFirstUser'))
         this.addLessLocalStorge('onlyConnect',-1)
+    this.addLessLocalStorge('theFirstUser',1)
   }
 
   //update data when enter to landingpage
